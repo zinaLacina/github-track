@@ -1,0 +1,9 @@
+settings:
+  github:
+    token: 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
+  email:
+    to: <zinalacina@gmail.com>
+    subject: "Subject of the pull request"
+  repo:
+    user: kubernetes
+    name: kubernetes

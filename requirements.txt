@@ -1,0 +1,4 @@
+Sphinx==4.2.0
+requests~=2.26.0
+setuptools~=57.4.0
+PyYAML~=5.4.1
