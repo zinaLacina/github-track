@@ -1,9 +1,11 @@
 settings:
+  auth:
+    twilioapi: ""
   github:
-    token: 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
+    token: ""
   email:
     to: <zinalacina@gmail.com>
     subject: "Subject of the pull request"
   repo:
-    user: kubernetes
-    name: kubernetes
+    user: zinalacina
+    name: github-track

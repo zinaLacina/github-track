@@ -1,10 +1,12 @@
+import os
 from dataclasses import dataclass
 import yaml
 
+import logging as log
 
 @dataclass
 class Auth:
-    token: str = "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"
+    token: str = ""
 
 
 @dataclass
@@ -24,12 +26,14 @@ class GhTrackObject:
     filename: str
     emailConf: EmailConf = EmailConf()
     repoConf: Repo = Repo()
-    token: Auth = Auth()
+    authToken: Auth = Auth()
 
     def __post_init__(self):
-        self.emailConf, self.repoConf, self.token = self.getConf(self.filename)
+        self.emailConf, self.repoConf, self.authToken = self.getConf(self.filename)
 
     def getConf(self, file_name: str) -> (EmailConf, Repo, Auth):
+        if not file_name:
+            file_name = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data/config.yml")
         try:
             with open(file_name) as f:
                 setting = yaml.safe_load(f)["settings"]
@@ -38,9 +42,10 @@ class GhTrackObject:
                 repo = Repo(user=setting["repo"]["user"], repo=setting["repo"]["name"])
                 return email, repo, token
         except:
+            log.info(f"impossible to open file {file_name}")
             return EmailConf(), Repo(), Auth()
 
 
-if __name__ == '__main__':
-    filename = "../data/config.yml"
-    gh = GhTrackObject(filename=filename)
+# if __name__ == '__main__':
+#     filename = "../data/config.yml"
+#     gh = GhTrackObject(filename=filename)

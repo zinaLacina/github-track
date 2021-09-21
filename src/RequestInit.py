@@ -3,6 +3,7 @@ from urllib import parse
 import requests
 
 from src.GhTrackException import UnknownApiQueryException
+from src.Util import Util
 
 
 class RequestInit:
@@ -10,9 +11,10 @@ class RequestInit:
 
     def __init__(self, token, apiUrl="https://api.github.com/repos/"):
         self.__tokenHeader = {
-            "Accept": "application/vnd.github.v3+json",
-            "Authorization": f"token {token}"
+            "Accept": "application/vnd.github.v3+json"
         }
+        if token:
+            self.__tokenHeader["Authorization"] = f"token {token}"
         self.__apiUrl = apiUrl
 
     def dataRequest(self, url, parameters=None, body=""):
