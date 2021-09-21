@@ -2,12 +2,12 @@ settings:
   auth:
     twilioapi: ""
   github:
-    token: "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"
+    token: ""
   email:
     to: zinalacina@gmail.com
     from: test@gmail.com
     subject: "Subject of the pull request"
-    sendGridApi: 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
+    sendGridApi: "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"
   repo:
     user: kubernetes
     name: kubernetes

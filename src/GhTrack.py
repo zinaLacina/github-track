@@ -43,7 +43,7 @@ class GhTrack(GhTrackObject):
     """
 
     def getRepo(self):
-        return self.ghRequest.dataRequest(url=g.public_repo)
+        return self.ghRequest.dataRequest(url=self.public_repo)
 
     """
     This method retrieves an all pull requests younger than the age provided, by default it 7 days
@@ -51,7 +51,7 @@ class GhTrack(GhTrackObject):
     """
 
     def getPulls(self):
-        return self.ghRequest.dataRequest(url=f"{g.public_repo}/pulls", old=self.age)
+        return self.ghRequest.dataRequest(url=f"{self.public_repo}/pulls", old=self.age)
 
     """
     This method retrieves an individual pull request by it number
@@ -62,7 +62,7 @@ class GhTrack(GhTrackObject):
     def getPull(self, number):
         # / repos /: owner /:repo / pulls /: number
         assert number is not None
-        return self.ghRequest.dataRequest(url=f"{g.public_repo}/pulls/{number}")
+        return self.ghRequest.dataRequest(url=f"{self.public_repo}/pulls/{number}")
 
     """
     This method sets the age of the pull requests to retrieve, by default it is 7 days
@@ -108,11 +108,11 @@ class GhTrack(GhTrackObject):
 
 
 
-if __name__ == '__main__':
-    params = "created=2021-08-30..2021-09-01"
-    g = GhTrack()
-    g.setAge(0)
-    res = g.getPulls()
-    summary = g.getSummary(res)
-    print(g.emailHandler.sendGridApi)
-    print(g.sendEmail(summary))
+# if __name__ == '__main__':
+#     params = "created=2021-08-30..2021-09-01"
+#     g = GhTrack()
+#     g.setAge(0)
+#     res = g.getPulls()
+#     summary = g.getSummary(res)
+#     print(g.emailHandler.sendGridApi)
+#     print(g.sendEmail(summary))

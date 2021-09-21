@@ -31,12 +31,12 @@ class RequestInit:
     :param old: int determines how old the data should be
     :rtype: :tuple:
     """
-    def dataRequest(self, url, parameters=None, body="", old=7):
+    def dataRequest(self, url, parameters=None, body="", old: int = 7):
         if parameters is None:
             parameters = dict()
 
         headers, output = self.__statusCheckedRequest(url, parameters, body)
-        output = list(filter(lambda row: Util.oneWeekOld(row["created_at"], old), output))
+        # output = list(filter(lambda row: Util.oneWeekOld(row["created_at"], old), dict(output)))
 
         # page = 2
         # while "link" in headers and "next" in headers["link"]:

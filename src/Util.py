@@ -9,7 +9,7 @@ class Util:
         return bool(s and not s.isspace())
 
     @staticmethod
-    def oneWeekOld(postDate: str, old: int) -> bool:
+    def oneWeekOld(postDate: str, old: int = 7) -> bool:
         post = datetime.fromisoformat(postDate[:-1])
         diffDay = (datetime.now() - post).days
         return diffDay <= old
