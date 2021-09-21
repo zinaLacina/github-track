@@ -6,23 +6,37 @@ import logging as log
 
 @dataclass
 class Auth:
+    """Auth class.
+        Github token configurations.
+    """
     token: str = ""
 
 
 @dataclass
 class EmailConf:
+    """EmailConf class.
+        Email configurations.
+    """
     to: str = "zinalacina@gmail.com"
     subject: str = "Pull request Test"
+    sendGridApi: str = "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"
+    fromEmail: str = "test@gmail.com"
 
 
 @dataclass
 class Repo:
+    """Repo class.
+        Public repo setting.
+    """
     user: str = "kubernetes"
     repo: str = "kubernetes"
 
 
 @dataclass
 class GhTrackObject:
+    """GhTrackObject class.
+        Contents the configuration information coming from data/config.yml and also default value.
+    """
     filename: str
     emailConf: EmailConf = EmailConf()
     repoConf: Repo = Repo()
@@ -38,7 +52,10 @@ class GhTrackObject:
             with open(file_name) as f:
                 setting = yaml.safe_load(f)["settings"]
                 token = Auth(setting["github"]["token"])
-                email = EmailConf(to=setting["email"]["to"], subject=setting["email"]["subject"])
+                email = EmailConf(to=setting["email"]["to"],
+                                  subject=setting["email"]["subject"],
+                                  sendGridApi=setting["email"]["sendGridApi"],
+                                  fromEmail=setting["email"]["from"])
                 repo = Repo(user=setting["repo"]["user"], repo=setting["repo"]["name"])
                 return email, repo, token
         except:
@@ -46,6 +63,3 @@ class GhTrackObject:
             return EmailConf(), Repo(), Auth()
 
 
-# if __name__ == '__main__':
-#     filename = "../data/config.yml"
-#     gh = GhTrackObject(filename=filename)

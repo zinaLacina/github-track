@@ -2,10 +2,12 @@ settings:
   auth:
     twilioapi: ""
   github:
-    token: ""
+    token: "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"
   email:
-    to: <zinalacina@gmail.com>
+    to: zinalacina@gmail.com
+    from: test@gmail.com
     subject: "Subject of the pull request"
+    sendGridApi: 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
   repo:
-    user: zinalacina
-    name: github-track
+    user: kubernetes
+    name: kubernetes

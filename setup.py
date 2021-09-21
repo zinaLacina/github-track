@@ -12,7 +12,9 @@ setuptools.setup(
     description="An empty CDK Python app",
     long_description=long_description,
     long_description_content_type="text/markdown",
-
+    url="https://github.com/zinaLacina/github-track",
+    package_data="data/*",
+    test_suite="tests",
     author="Lacina ZINA",
 
     package_dir={"": "src"},
