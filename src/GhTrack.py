@@ -2,11 +2,13 @@ from src.GhTrackException import RepoNotFoundException
 from src.GhTrackObject import GhTrackObject, EmailConf, Repo
 import requests
 
+from src.RequestInit import RequestInit
+
 
 class GhTrack(GhTrackObject):
     """Class to pull down the pull request of a github public repositories for a user."""
 
-    def __init__(self, file_name="", email=None, user=None, repo=None):
+    def __init__(self, file_name=None, email=None, user=None, repo=None):
         """Constructor.
             Email uses to send the alert notification.
             User is the repo owner(it can be a user or organisation)
@@ -15,20 +17,19 @@ class GhTrack(GhTrackObject):
             :param user: Github user or organization.
             :param repo: Github public repo.
         """
-        super().__init__()
-        self.base_url = "https://api.github.com"
-        self.headers = {
-            "Accept": "application/vnd.github.v3+json",
-            "Authorization": f"token {self.token}"
-        }
+        super().__init__(filename=file_name)
+        self.ghRequest = RequestInit(token=self.token.token)
         self.alertEmail = self.emailConf if email is None else EmailConf(to=email)
         self.repoInfos = self.repoConf if user is None and repo is None else Repo(user=user, repo=repo)
+        self.public_repo = self.__user_repo(self.repoInfos)
 
-
-
-    def __make_full_url(self, repo: Repo):
-        return f"{self.base_url}/repos/{repo.user}/{repo.repo}"
+    def __user_repo(self, repo: Repo):
+        return f"{repo.user}/{repo.repo}"
 
 
 if __name__ == '__main__':
-    g = GhTrack(user="zinaLacina", repo="mutualBookstore")
+    g = GhTrack()
+    print(g.ghRequest.getCompleteUrl(g.public_repo))
+    print(g.ghRequest.getToken())
+    res = g.ghRequest.dataRequest(url=g.public_repo)
+    print(res)

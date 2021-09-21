@@ -3,4 +3,7 @@ import unittest
 
 class TestInit(unittest.TestCase):
     def setUp(self):
-        super().setUp()
+        super(TestInit, self).setUp()
+
+    def tearDown(self) -> None:
+        super(TestInit, self).tearDown()

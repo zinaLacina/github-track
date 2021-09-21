@@ -60,3 +60,9 @@ class RepoNotFoundException(GhTrackException):
     """
     RepoNotFoundException is raised when Github can not find the public repo
     """
+
+
+class UnknownApiQueryException(GhTrackException):
+    """
+    UnknownApiQueryException is raised when Github can not find the public repo
+    """

@@ -1,6 +1,6 @@
 settings:
   github:
-    token: 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
+    token: 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
   email:
     to: <zinalacina@gmail.com>
     subject: "Subject of the pull request"

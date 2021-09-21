@@ -119,7 +119,8 @@ venv.bak/
 
 # Rope project settings
 .ropeproject
-
+.idea
+.DS_Store
 # mkdocs documentation
 /site
 

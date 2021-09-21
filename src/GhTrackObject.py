@@ -4,7 +4,7 @@ import yaml
 
 @dataclass
 class Auth:
-    token: str = "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"
+    token: str = "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"
 
 
 @dataclass
@@ -37,12 +37,10 @@ class GhTrackObject:
                 email = EmailConf(to=setting["email"]["to"], subject=setting["email"]["subject"])
                 repo = Repo(user=setting["repo"]["user"], repo=setting["repo"]["name"])
                 return email, repo, token
-        except Exception as ex:
-            print(f"Unable to load file, use default values {ex}")
+        except:
             return EmailConf(), Repo(), Auth()
 
 
 if __name__ == '__main__':
     filename = "../data/config.yml"
     gh = GhTrackObject(filename=filename)
-
