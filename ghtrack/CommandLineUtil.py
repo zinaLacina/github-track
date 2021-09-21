@@ -2,7 +2,7 @@
 import argparse
 from colorama import Fore, Back, Style
 
-from src.GhTrack import GhTrack
+from ghtrack.GhTrack import GhTrack
 
 """
 github-track.commandline
@@ -60,18 +60,19 @@ class CommandLineUtil:
         try:
             print(Style.BRIGHT)
             g = GhTrack(file_name=file, token=token, email=email, user=user, repo=repo)
-            pullRequests = g.getPulls()
-            if not g.emailNotConsole:
+            # pullRequests = g.getPulls()
+            emailNotConsole = False
+            if emailNotConsole:
                 print(Fore.GREEN, "Since you did not provide an email, here the console")
                 print(Fore.RED, f"Public repo: {g.public_repo}")
                 print(Fore.RED, "~~~~~~~~~~SUMMARY~~~~~~~~~")
-                print(Fore.MAGENTA, f"{g.getSummary(pullRequests)}")
+                print(Fore.MAGENTA, f"{g.sendEmailOrPrintConsole(emailNotConsole)}")
                 print(Style.RESET_ALL)
             else:
                 print(Fore.GREEN, f"Since you provided an email, an email was sent to: {g.alertEmail.to}")
                 print(Fore.RED, f"Public repo: {g.public_repo}")
                 print(Fore.RED, "~~~~~~~~~~SUMMARY SENT BY EMAIL~~~~~~~~~")
-                print(Fore.MAGENTA, f"{g.getSummary(pullRequests)}")
+                print(Fore.MAGENTA, f"{g.sendEmailOrPrintConsole(emailNotConsole)}")
                 print(Style.RESET_ALL)
         except Exception as ex:
             print(Style.DIM)

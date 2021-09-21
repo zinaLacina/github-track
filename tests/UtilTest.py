@@ -1,4 +1,4 @@
-from src.Util import Util
+from ghtrack.Util import Util
 from tests.TestInit import TestInit
 
 

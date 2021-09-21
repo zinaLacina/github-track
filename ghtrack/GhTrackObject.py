@@ -19,8 +19,8 @@ class EmailConf:
     """
     to: str = "zinalacina@gmail.com"
     subject: str = "Pull request Test"
-    sendGridApi: str = "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"
-    fromEmail: str = "test@gmail.com"
+    sendGridApi: str = ""
+    fromEmail: str = "zlacina@gmail.com"
 
 
 @dataclass
@@ -37,7 +37,7 @@ class GhTrackObject:
     """GhTrackObject class.
         Contents the configuration information coming from data/config.yml and also default value.
     """
-    filename: str
+    filename: str = None
     emailConf: EmailConf = EmailConf()
     repoConf: Repo = Repo()
     authToken: Auth = Auth()
@@ -48,6 +48,8 @@ class GhTrackObject:
     def getConf(self, file_name: str) -> (EmailConf, Repo, Auth):
         if not file_name:
             file_name = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data/config.yml")
+        else:
+            file_name = os.path.abspath(file_name)
         try:
             with open(file_name) as f:
                 setting = yaml.safe_load(f)["settings"]
@@ -58,8 +60,8 @@ class GhTrackObject:
                                   fromEmail=setting["email"]["from"])
                 repo = Repo(user=setting["repo"]["user"], repo=setting["repo"]["name"])
                 return email, repo, token
-        except:
-            log.info(f"impossible to open file {file_name}")
+        except Exception as ex:
+            log.info(f"impossible to open file {file_name}, ex={ex}")
             return EmailConf(), Repo(), Auth()
 
 

@@ -1,4 +1,4 @@
-from src.RequestInit import RequestInit
+from ghtrack.RequestInit import RequestInit
 from tests.TestInit import TestInit
 
 

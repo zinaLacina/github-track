@@ -1,9 +1,10 @@
 import json
+import logging
 from urllib import parse
 import requests
 
-from src.GhTrackException import UnknownApiQueryException
-from src.Util import Util
+from ghtrack.GhTrackException import UnknownApiQueryException
+from ghtrack.Util import Util
 
 
 class RequestInit:
@@ -36,6 +37,7 @@ class RequestInit:
             parameters = dict()
 
         headers, output = self.__statusCheckedRequest(url, parameters, body)
+        output = [row for row in output if Util.oneWeekOld(row["created_at"], old)]
         # output = list(filter(lambda row: Util.oneWeekOld(row["created_at"], old), dict(output)))
 
         # page = 2
@@ -80,16 +82,20 @@ class RequestInit:
     """
     def __jsonRequest(self, url, parameters, input) -> tuple:
         fullUrl = self.getCompleteUrl(url, parameters)
-        response = requests.get(
-            url=fullUrl,
-            headers=self.__tokenHeader,
-            data=json.dumps(input)
-        )
-        status = response.status_code
-        headers = dict(response.headers)
-        output = response.json()
+        try:
+            response = requests.get(
+                url=fullUrl,
+                headers=self.__tokenHeader
+            )
+            status = response.status_code
+            headers = dict(response.headers)
+            output = response.json()
+            return status, headers, output
+        except Exception as ex:
+            logging.info(f"Exception during json conversion {ex}")
+            return 200, dict(), []
 
-        return status, headers, output
+
 
     """
     This method give you the absolute url of the public repo you are querying on

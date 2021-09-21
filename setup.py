@@ -17,8 +17,8 @@ setuptools.setup(
     test_suite="tests",
     author="Lacina ZINA",
 
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
+    package_dir={"": "ghtrack"},
+    packages=setuptools.find_packages(where="ghtrack"),
 
     install_requires=[
         "",

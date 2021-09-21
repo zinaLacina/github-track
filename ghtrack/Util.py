@@ -14,3 +14,7 @@ class Util:
         diffDay = (datetime.now() - post).days
         return diffDay <= old
 
+    @staticmethod
+    def isOpenOrClose(state: str) -> bool:
+        return state.lower() in ("open", "closed")
+

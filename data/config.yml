@@ -5,9 +5,9 @@ settings:
     token: ""
   email:
     to: zinalacina@gmail.com
-    from: test@gmail.com
+    from: zlacina@monbili.com
     subject: "Subject of the pull request"
-    sendGridApi: "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"
+    sendGridApi: ""
   repo:
     user: kubernetes
     name: kubernetes
