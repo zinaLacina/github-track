@@ -3,7 +3,6 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-
 setuptools.setup(
     name="github-track",
     version="0.0.1",
@@ -15,7 +14,7 @@ setuptools.setup(
     project_urls={
         "Bug Tracker": "https://github.com/zinaLacina/github-track/issues",
     },
-    package_data="data/*",
+    package_data={'': ['data/*']},
     test_suite="tests",
     author="Lacina ZINA",
 
