@@ -34,4 +34,5 @@ deployPyPi:
   username: "__token__"
   password: $PYPI_TOKEN
   on:
-    tags: true
+    branch: main
+#    tags: true
