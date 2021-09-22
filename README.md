@@ -2,6 +2,8 @@ Introduction
 ============
 
 github-track is a Python library to use the [Github API v3](http://developer.github.com/v3). With it, you can pull any public repositories pull requests from Python scripts. **Sending email currently work only with sendGrid**
+The full documentation can be found here [github-track full docs](https://zinalacina.github.io/github-track/index.html)
+In the examples section of the docs, you can learn how to parse a configuration file to the module and much more.
 
 Download and install
 --------------------
