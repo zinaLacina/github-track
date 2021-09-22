@@ -19,7 +19,7 @@ deploy:
   skip-cleanup: true
   keep-history: true
   on:
-    branch: master
+    branch: main
   github-token: $GITHUB_TOKEN
   local-dir: docs/build/html
   committer-from-gh: true
