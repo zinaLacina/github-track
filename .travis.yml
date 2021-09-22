@@ -14,29 +14,20 @@ script:
 after_success:
   - cd docs && make html
 
-_deploy_gitpages: &_deploy_gitpages
-  provider: pages
-  skip-cleanup: true
-  keep-history: true
-  on:
-    branch: main
-  github-token: $GITHUB_TOKEN
-  local-dir: docs/_build/html
-  committer-from-gh: true
-
-_deploy_pypi: &_deploy_pypi:
-  provider: pypi
-  skip-cleanup: true
-  keep-history: true
-  #  username: $PYPI_USER
-  username: "__token__"
-  password: $PYPI_TOKEN
-  on:
-    branch: main
-#    tags: true
-
-jobs:
-  include:
-    - <<: *_deploy_gitpages
-    - <<: *_deploy_pypi
-
+deploy:
+  - provider: pages
+    skip-cleanup: true
+    keep-history: true
+    on:
+      branch: main
+    github-token: $GITHUB_TOKEN
+    local-dir: docs/_build/html
+    committer-from-gh: true
+  - provider: pypi
+    skip-cleanup: true
+    keep-history: true
+    #  username: $PYPI_USER
+    username: "__token__"
+    password: $PYPI_TOKEN
+    on:
+      branch: main
