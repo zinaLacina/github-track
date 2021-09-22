@@ -18,8 +18,9 @@ setuptools.setup(
     test_suite="tests",
     author="Lacina ZINA",
     author_email="zinalacina@yahoo.com",
-    package_dir={"": "ghtrack"},
-    packages=setuptools.find_packages(where="ghtrack"),
+    package_dir={"ghtrack": "GhTrack"},
+    # packages=setuptools.find_packages(where="ghtrack"),
+    packages=["ghtrack"],
 
     install_requires=[
         "requests~=2.26.0",
