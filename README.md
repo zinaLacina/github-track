@@ -31,10 +31,7 @@ Once inside the direction check that you have the latest up to date of the setup
  ``` 
  And you are all set for to run the application.
 
-FYI: This package will be release in the [Python Package Index](https://github.com/zinaLacina/github-track), so, once done by using 
-```bash 
-pip install ghtrack
-``` 
+FYI: This package will be published in the [Python Package Index](https://github.com/zinaLacina/github-track), so, a pip install
 should be enough.
 
 Short tutorial
