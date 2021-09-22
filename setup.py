@@ -17,7 +17,7 @@ setuptools.setup(
     package_data={'': ['data/*']},
     test_suite="tests",
     author="Lacina ZINA",
-
+    author_email="zinalacina@yahoo.com",
     package_dir={"": "ghtrack"},
     packages=setuptools.find_packages(where="ghtrack"),
 
@@ -31,7 +31,7 @@ setuptools.setup(
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
-        "License :: MIT License:: Apache Software License",
+        "License :: OSI Approved :: The Unlicense (Unlicense)",
         "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
