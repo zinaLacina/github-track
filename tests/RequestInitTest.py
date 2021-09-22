@@ -1,8 +1,9 @@
+import unittest
+
 from ghtrack.RequestInit import RequestInit
-from tests.TestInit import TestInit
 
 
-class RequestInitTest(TestInit):
+class RequestInitTest(unittest.TestCase):
 
     def setUp(self):
         self.req = RequestInit(token="token")

@@ -9,7 +9,7 @@ setuptools.setup(
     name="github-track",
     version="0.0.1",
     py_modules=["GhTrack"],
-    description="An empty CDK Python app",
+    description="An Python module api app",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/zinaLacina/github-track",

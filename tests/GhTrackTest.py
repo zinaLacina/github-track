@@ -1,7 +1,7 @@
-from tests.TestInit import TestInit
+import unittest
 
 
-class GithubMonitorTest(TestInit):
+class GithubMonitorTest(unittest.TestCase):
     def setUp(self):
         self.setUp()
 
