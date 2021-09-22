@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="github-track",
+    name="GhTrack",
     version="0.0.1",
     py_modules=["GhTrack"],
     description="An Python module api app",

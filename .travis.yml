@@ -27,3 +27,11 @@ deploy:
   github-token: $GITHUB_TOKEN
   local-dir: docs/_build/html
   committer-from-gh: true
+
+deployPyPi:
+  provider: pypi
+#  username: $PYPI_USER
+  username: "__token__"
+  password: $PYPI_TOKEN
+  on:
+    tags: true
