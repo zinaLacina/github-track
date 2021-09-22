@@ -40,8 +40,8 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#short-tutorial">Short tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#download-and-install">Download and install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#short-tutorial">Short tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#licensing">Licensing</a></li>
 </ul>
 </li>
@@ -76,29 +76,56 @@
   <section id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h1>
 <p>github-track is a Python library to use the <a class="reference external" href="http://developer.github.com/v3">Github API v3</a>.
-With it, you can pull any public repositories pull requests from Python scripts.</p>
+With it, you can pull any public repositories pull requests from Python scripts.
+<strong>Sending email currently work only with sendGrid</strong></p>
+<section id="download-and-install">
+<h2>Download and install<a class="headerlink" href="#download-and-install" title="Permalink to this headline"></a></h2>
+<p>First of all make sure you have install python in your machine and the version is higher than <code class="docutils literal notranslate"><span class="pre">3.6</span></code>.
+If not please process as follow to install it.
+&gt;&gt;``brew install python&#64;3.9``</p>
+<p>To use it please clone the github repository <a class="reference external" href="https://github.com/zinaLacina/github-track">Github</a>
+Once it clone please cd into the directory
+&gt;&gt; <code class="docutils literal notranslate"><span class="pre">cd</span>&#160; <span class="pre">github-track</span></code>
+Once in the direction check that you have the latest information of the setuptools.
+&gt;&gt; <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">setuptools</span></code>
+And lastly install the github-track module
+&gt;&gt; <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">setup.py</span> <span class="pre">install</span></code>
+And you are all set for to run the application.</p>
+<p>FYI:
+This package will be release in the <a class="reference external" href="https://github.com/zinaLacina/github-track">Python Package Index</a>, so, once done by using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ghtrack</span></code> should
+be enough.</p>
+</section>
 <section id="short-tutorial">
 <h2>Short tutorial<a class="headerlink" href="#short-tutorial" title="Permalink to this headline"></a></h2>
-<p>First create a GhTrack instance:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ghtrack</span> <span class="kn">import</span> <span class="n">GhTrack</span>
-
-<span class="c1"># using an access token</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">GhTrack</span><span class="p">(</span><span class="s2">&quot;access_token&quot;</span><span class="p">)</span>
-
-<span class="c1"># Using default values</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">GhTrack</span><span class="p">()</span>
-</pre></div>
-</div>
+<p>Let’s test the base features of the module, that consist to pull the last
+7 days pull requests of a public repo.
+By default the module has default value in the settings located in the data folder.
+The default repo is <code class="docutils literal notranslate"><span class="pre">kubernetes</span></code>.
+So to get the list of the last 7 days pull requests of the <code class="docutils literal notranslate"><span class="pre">kubernetes</span></code> repo.</p>
+<p>Open a terminal, and in the console please type &gt;&gt;``python3``
+After that, import the <code class="docutils literal notranslate"><span class="pre">GhTrack</span></code> module
+.. code-block:: python</p>
+<blockquote>
+<div><p>&gt;&gt; from GhTrack import GhTrack
+# create GhTrack object without any params(first of all the default params)
+&gt;&gt; g = GhTrack()
+#That will print on the console the html of the last 7 days pull requests
+&gt;&gt; g.sendEmailOrPrintConsole(emailNotConsole=False)</p>
+</div></blockquote>
+<p>You can also get the json format of the last 7 days pull requests
+.. code-block:: python</p>
+<blockquote>
+<div><p>&gt;&gt;  from GhTrack import GhTrack
+&gt;&gt; g = GhTrack()
+&gt;&gt; pulls = g.getPulls()
+#json format
+&gt;&gt; pulls</p>
+</div></blockquote>
 <p>Then play with your Github objects:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pull</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">getPulls</span><span class="p">():</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pull</span> <span class="ow">in</span> <span class="n">pulls</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">pull</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
-</section>
-<section id="download-and-install">
-<h2>Download and install<a class="headerlink" href="#download-and-install" title="Permalink to this headline"></a></h2>
-<p>This package is in the <a class="reference external" href="https://github.com/zinaLacina/github-track">Python Package Index</a>, so <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ghtrack</span></code> should
-be enough.  You can also clone it on <a class="reference external" href="https://github.com/zinaLacina/github-track">Github</a>.</p>
 </section>
 <section id="licensing">
 <h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline"></a></h2>
