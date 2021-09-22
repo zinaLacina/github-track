@@ -1,5 +1,3 @@
-# github-track
-
 Introduction
 ============
 
@@ -9,18 +7,33 @@ Download and install
 --------------------
 
 First of all make sure you have install python in your machine and the version is higher than `3.6`. If not please process as follow to install it. 
-`>> brew install python@3.9`
+```bash 
+brew install python@3.9
+```
 
-To use it please clone the [github-track]((https://github.com/zinaLacina/github-track) repository.
+To use it please clone the [github-track](https://github.com/zinaLacina/github-track) repository.
+```bash
+git clone https://github.com/zinaLacina/github-track
+```
 Once it clone please cd into the directory 
-`>> cd  github-track` 
+```bash
+cd  github-track
+```
 Once inside the direction check that you have the latest up to date of the setuptools. 
- `>> python3 -m pip install --upgrade setuptools` 
+ ```bash
+ python3 -m pip install --upgrade setuptools
+ ```
  And lastly install the *module* 
- `>> python3 setup.py install` 
+ ```bash
+ python3 setup.py install
+ ``` 
  And you are all set for to run the application.
 
-FYI: This package will be release in the [Python Package Index](https://github.com/zinaLacina/github-track), so, once done by using `pip install ghtrack` should be enough.
+FYI: This package will be release in the [Python Package Index](https://github.com/zinaLacina/github-track), so, once done by using 
+```bash 
+pip install ghtrack
+``` 
+should be enough.
 
 Short tutorial
 --------------
@@ -28,7 +41,9 @@ Short tutorial
 Let's test the base features of the module, that consist to pull the last 7 days pull requests of a public repo. By default the module has default value in the settings located in the data folder. The default repo is `kubernetes`. So to get the list of the last 7 days pull requests of the `kubernetes` repo.
 
 Open a terminal, and in the console please type.
-`>> python3` 
+```bash
+>> python3
+``` 
 After that, import the `GhTrack` module 
 ```bash
 >> from GhTrack import GhTrack
