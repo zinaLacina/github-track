@@ -19,7 +19,9 @@ setuptools.setup(
     author="Lacina ZINA",
 
     package_dir={"": "ghtrack"},
-    packages=setuptools.find_packages(where="ghtrack"),
+    # packages=setuptools.find_packages(where="ghtrack"),
+
+    packages=["ghtrack"],
 
     install_requires=[
         "requests~=2.26.0",
