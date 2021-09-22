@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ghtrack package &mdash; github-track  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Reference" href="reference.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> github-track
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ghtrack package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ghtrack.CommandLineUtil">ghtrack.CommandLineUtil module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ghtrack.EmailHandler">ghtrack.EmailHandler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ghtrack.GhTrack">ghtrack.GhTrack module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ghtrack.GhTrackException">ghtrack.GhTrackException module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ghtrack.GhTrackObject">ghtrack.GhTrackObject module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ghtrack.RequestInit">ghtrack.RequestInit module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ghtrack.Util">ghtrack.Util module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ghtrack">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">github-track</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="reference.html">Reference</a> &raquo;</li>
+      <li>ghtrack package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ghtrack.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ghtrack-package">
+<h1>ghtrack package<a class="headerlink" href="#ghtrack-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-ghtrack.CommandLineUtil">
+<span id="ghtrack-commandlineutil-module"></span><h2>ghtrack.CommandLineUtil module<a class="headerlink" href="#module-ghtrack.CommandLineUtil" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ghtrack.CommandLineUtil.CommandLineUtil">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.CommandLineUtil.</span></span><span class="sig-name descname"><span class="pre">CommandLineUtil</span></span><a class="headerlink" href="#ghtrack.CommandLineUtil.CommandLineUtil" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.CommandLineUtil.CommandLineUtil.main">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.CommandLineUtil.CommandLineUtil.main" title="Permalink to this definition"></a></dt>
+<dd><p>Starting point for the program execution.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ghtrack.EmailHandler">
+<span id="ghtrack-emailhandler-module"></span><h2>ghtrack.EmailHandler module<a class="headerlink" href="#module-ghtrack.EmailHandler" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ghtrack.EmailHandler.EmailHandler">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.EmailHandler.</span></span><span class="sig-name descname"><span class="pre">EmailHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emailConf</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ghtrack.GhTrackObject.EmailConf" title="ghtrack.GhTrackObject.EmailConf"><span class="pre">ghtrack.GhTrackObject.EmailConf</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">EmailConf(to='zinalacina&#64;gmail.com',</span> <span class="pre">subject='Pull</span> <span class="pre">request</span> <span class="pre">Test',</span> <span class="pre">sendGridApi='',</span> <span class="pre">fromEmail='zlacina&#64;gmail.com')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repoConf</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ghtrack.GhTrackObject.Repo" title="ghtrack.GhTrackObject.Repo"><span class="pre">ghtrack.GhTrackObject.Repo</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">Repo(user='kubernetes',</span> <span class="pre">repo='kubernetes')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">authToken</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ghtrack.GhTrackObject.Auth" title="ghtrack.GhTrackObject.Auth"><span class="pre">ghtrack.GhTrackObject.Auth</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">Auth(token='')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.EmailHandler.EmailHandler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ghtrack.GhTrackObject.GhTrackObject" title="ghtrack.GhTrackObject.GhTrackObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ghtrack.GhTrackObject.GhTrackObject</span></code></a></p>
+<p>EmailHandler is use to send email through twilio.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.EmailHandler.EmailHandler.sendEmail">
+<span class="sig-name descname"><span class="pre">sendEmail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#ghtrack.EmailHandler.EmailHandler.sendEmail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ghtrack.GhTrack">
+<span id="ghtrack-ghtrack-module"></span><h2>ghtrack.GhTrack module<a class="headerlink" href="#module-ghtrack.GhTrack" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ghtrack.GhTrack.GhTrack">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrack.</span></span><span class="sig-name descname"><span class="pre">GhTrack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrack.GhTrack" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ghtrack.GhTrackObject.GhTrackObject" title="ghtrack.GhTrackObject.GhTrackObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">ghtrack.GhTrackObject.GhTrackObject</span></code></a></p>
+<p>Class to pull down the pull request of a github public repositories for a user.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.GhTrack.GhTrack.getPull">
+<span class="sig-name descname"><span class="pre">getPull</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrack.GhTrack.getPull" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.GhTrack.GhTrack.getPulls">
+<span class="sig-name descname"><span class="pre">getPulls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrack.GhTrack.getPulls" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.GhTrack.GhTrack.getPullsByStatus">
+<span class="sig-name descname"><span class="pre">getPullsByStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrack.GhTrack.getPullsByStatus" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.GhTrack.GhTrack.getRepo">
+<span class="sig-name descname"><span class="pre">getRepo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrack.GhTrack.getRepo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.GhTrack.GhTrack.sendEmailOrPrintConsole">
+<span class="sig-name descname"><span class="pre">sendEmailOrPrintConsole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">emailNotConsole</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ghtrack.GhTrack.GhTrack.sendEmailOrPrintConsole" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.GhTrack.GhTrack.setAge">
+<span class="sig-name descname"><span class="pre">setAge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">age</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrack.GhTrack.setAge" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ghtrack.GhTrackException">
+<span id="ghtrack-ghtrackexception-module"></span><h2>ghtrack.GhTrackException module<a class="headerlink" href="#module-ghtrack.GhTrackException" title="Permalink to this headline"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="ghtrack.GhTrackException.BadUserException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackException.</span></span><span class="sig-name descname"><span class="pre">BadUserException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackException.BadUserException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ghtrack.GhTrackException.GhTrackException" title="ghtrack.GhTrackException.GhTrackException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ghtrack.GhTrackException.GhTrackException</span></code></a></p>
+<p>BadUserException is raised when request the user which repos you try to pull does not exist.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ghtrack.GhTrackException.GhTrackException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackException.</span></span><span class="sig-name descname"><span class="pre">GhTrackException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackException.GhTrackException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>This class contains all the possible exceptions that you can encounter during the execution of this project.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ghtrack.GhTrackException.GhTrackException.data">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#ghtrack.GhTrackException.GhTrackException.data" title="Permalink to this definition"></a></dt>
+<dd><p>The data returned by the Github API</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ghtrack.GhTrackException.GhTrackException.headers">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">headers</span></span><a class="headerlink" href="#ghtrack.GhTrackException.GhTrackException.headers" title="Permalink to this definition"></a></dt>
+<dd><p>The headers returned by the Github API</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ghtrack.GhTrackException.GhTrackException.status">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#ghtrack.GhTrackException.GhTrackException.status" title="Permalink to this definition"></a></dt>
+<dd><p>The status returned by the Github API</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ghtrack.GhTrackException.NotFoundException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackException.</span></span><span class="sig-name descname"><span class="pre">NotFoundException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackException.NotFoundException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ghtrack.GhTrackException.GhTrackException" title="ghtrack.GhTrackException.GhTrackException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ghtrack.GhTrackException.GhTrackException</span></code></a></p>
+<p>NotFoundException is raised when Github API return 404  status</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ghtrack.GhTrackException.RateLimitExceededException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackException.</span></span><span class="sig-name descname"><span class="pre">RateLimitExceededException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackException.RateLimitExceededException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ghtrack.GhTrackException.GhTrackException" title="ghtrack.GhTrackException.GhTrackException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ghtrack.GhTrackException.GhTrackException</span></code></a></p>
+<p>RateLimitExceededException is  raised when the rate limit is exceeded github replies with 403</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ghtrack.GhTrackException.RepoNotFoundException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackException.</span></span><span class="sig-name descname"><span class="pre">RepoNotFoundException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackException.RepoNotFoundException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ghtrack.GhTrackException.GhTrackException" title="ghtrack.GhTrackException.GhTrackException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ghtrack.GhTrackException.GhTrackException</span></code></a></p>
+<p>RepoNotFoundException is raised when Github can not find the public repo</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="ghtrack.GhTrackException.UnknownApiQueryException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackException.</span></span><span class="sig-name descname"><span class="pre">UnknownApiQueryException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackException.UnknownApiQueryException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ghtrack.GhTrackException.GhTrackException" title="ghtrack.GhTrackException.GhTrackException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ghtrack.GhTrackException.GhTrackException</span></code></a></p>
+<p>UnknownApiQueryException is raised when Github can not find the public repo</p>
+</dd></dl>
+
+</section>
+<section id="module-ghtrack.GhTrackObject">
+<span id="ghtrack-ghtrackobject-module"></span><h2>ghtrack.GhTrackObject module<a class="headerlink" href="#module-ghtrack.GhTrackObject" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.Auth">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackObject.</span></span><span class="sig-name descname"><span class="pre">Auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackObject.Auth" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Auth class.
+Github token configurations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.Auth.token">
+<span class="sig-name descname"><span class="pre">token</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">''</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.Auth.token" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.EmailConf">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackObject.</span></span><span class="sig-name descname"><span class="pre">EmailConf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'zinalacina&#64;gmail.com'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'Pull</span> <span class="pre">request</span> <span class="pre">Test'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sendGridApi</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fromEmail</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'zlacina&#64;gmail.com'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackObject.EmailConf" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>EmailConf class.
+Email configurations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.EmailConf.fromEmail">
+<span class="sig-name descname"><span class="pre">fromEmail</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'zlacina&#64;gmail.com'</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.EmailConf.fromEmail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.EmailConf.sendGridApi">
+<span class="sig-name descname"><span class="pre">sendGridApi</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">''</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.EmailConf.sendGridApi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.EmailConf.subject">
+<span class="sig-name descname"><span class="pre">subject</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'Pull</span> <span class="pre">request</span> <span class="pre">Test'</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.EmailConf.subject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.EmailConf.to">
+<span class="sig-name descname"><span class="pre">to</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'zinalacina&#64;gmail.com'</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.EmailConf.to" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.GhTrackObject">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackObject.</span></span><span class="sig-name descname"><span class="pre">GhTrackObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emailConf</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ghtrack.GhTrackObject.EmailConf" title="ghtrack.GhTrackObject.EmailConf"><span class="pre">ghtrack.GhTrackObject.EmailConf</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">EmailConf(to='zinalacina&#64;gmail.com',</span> <span class="pre">subject='Pull</span> <span class="pre">request</span> <span class="pre">Test',</span> <span class="pre">sendGridApi='',</span> <span class="pre">fromEmail='zlacina&#64;gmail.com')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repoConf</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ghtrack.GhTrackObject.Repo" title="ghtrack.GhTrackObject.Repo"><span class="pre">ghtrack.GhTrackObject.Repo</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">Repo(user='kubernetes',</span> <span class="pre">repo='kubernetes')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">authToken</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ghtrack.GhTrackObject.Auth" title="ghtrack.GhTrackObject.Auth"><span class="pre">ghtrack.GhTrackObject.Auth</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">Auth(token='')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackObject.GhTrackObject" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>GhTrackObject class.
+Contents the configuration information coming from data/config.yml and also default value.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.GhTrackObject.authToken">
+<span class="sig-name descname"><span class="pre">authToken</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#ghtrack.GhTrackObject.Auth" title="ghtrack.GhTrackObject.Auth"><span class="pre">ghtrack.GhTrackObject.Auth</span></a></em><em class="property"> <span class="pre">=</span> <span class="pre">Auth(token='')</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.GhTrackObject.authToken" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.GhTrackObject.emailConf">
+<span class="sig-name descname"><span class="pre">emailConf</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#ghtrack.GhTrackObject.EmailConf" title="ghtrack.GhTrackObject.EmailConf"><span class="pre">ghtrack.GhTrackObject.EmailConf</span></a></em><em class="property"> <span class="pre">=</span> <span class="pre">EmailConf(to='zinalacina&#64;gmail.com',</span> <span class="pre">subject='Pull</span> <span class="pre">request</span> <span class="pre">Test',</span> <span class="pre">sendGridApi='',</span> <span class="pre">fromEmail='zlacina&#64;gmail.com')</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.GhTrackObject.emailConf" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.GhTrackObject.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.GhTrackObject.filename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.GhTrackObject.getConf">
+<span class="sig-name descname"><span class="pre">getConf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">file_name:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'ghtrack.GhTrackObject.EmailConf'&gt;</span></em>, <em class="sig-param"><span class="pre">&lt;class</span> <span class="pre">'ghtrack.GhTrackObject.Repo'&gt;</span></em>, <em class="sig-param"><span class="pre">&lt;class</span> <span class="pre">'ghtrack.GhTrackObject.Auth'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackObject.GhTrackObject.getConf" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.GhTrackObject.repoConf">
+<span class="sig-name descname"><span class="pre">repoConf</span></span><em class="property"><span class="pre">:</span> <a class="reference internal" href="#ghtrack.GhTrackObject.Repo" title="ghtrack.GhTrackObject.Repo"><span class="pre">ghtrack.GhTrackObject.Repo</span></a></em><em class="property"> <span class="pre">=</span> <span class="pre">Repo(user='kubernetes',</span> <span class="pre">repo='kubernetes')</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.GhTrackObject.repoConf" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.Repo">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.GhTrackObject.</span></span><span class="sig-name descname"><span class="pre">Repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'kubernetes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repo</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'kubernetes'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.GhTrackObject.Repo" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Repo class.
+Public repo setting.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.Repo.repo">
+<span class="sig-name descname"><span class="pre">repo</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'kubernetes'</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.Repo.repo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ghtrack.GhTrackObject.Repo.user">
+<span class="sig-name descname"><span class="pre">user</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><em class="property"> <span class="pre">=</span> <span class="pre">'kubernetes'</span></em><a class="headerlink" href="#ghtrack.GhTrackObject.Repo.user" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ghtrack.RequestInit">
+<span id="ghtrack-requestinit-module"></span><h2>ghtrack.RequestInit module<a class="headerlink" href="#module-ghtrack.RequestInit" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ghtrack.RequestInit.RequestInit">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.RequestInit.</span></span><span class="sig-name descname"><span class="pre">RequestInit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apiUrl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://api.github.com/repos/'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.RequestInit.RequestInit" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class initialize the requests object with default and required values</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.RequestInit.RequestInit.dataRequest">
+<span class="sig-name descname"><span class="pre">dataRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.RequestInit.RequestInit.dataRequest" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.RequestInit.RequestInit.getCompleteUrl">
+<span class="sig-name descname"><span class="pre">getCompleteUrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.RequestInit.RequestInit.getCompleteUrl" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.RequestInit.RequestInit.getToken">
+<span class="sig-name descname"><span class="pre">getToken</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.RequestInit.RequestInit.getToken" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.RequestInit.RequestInit.statusRequest">
+<span class="sig-name descname"><span class="pre">statusRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ghtrack.RequestInit.RequestInit.statusRequest" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ghtrack.Util">
+<span id="ghtrack-util-module"></span><h2>ghtrack.Util module<a class="headerlink" href="#module-ghtrack.Util" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ghtrack.Util.Util">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ghtrack.Util.</span></span><span class="sig-name descname"><span class="pre">Util</span></span><a class="headerlink" href="#ghtrack.Util.Util" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.Util.Util.isOpenOrClose">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">isOpenOrClose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ghtrack.Util.Util.isOpenOrClose" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.Util.Util.is_not_blank">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">is_not_blank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ghtrack.Util.Util.is_not_blank" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ghtrack.Util.Util.oneWeekOld">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">oneWeekOld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">postDate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ghtrack.Util.Util.oneWeekOld" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ghtrack">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ghtrack" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="reference.html" class="btn btn-neutral float-left" title="Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Lacina ZINA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

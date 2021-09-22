@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GhTrack Class &mdash; github-track  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reference" href="../reference.html" />
+    <link rel="prev" title="Examples" href="../examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> github-track
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../examples.html">Examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GhTrack Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-file">Configuration file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-the-class-ghtrack">Setup the class GhTrack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-the-age-of-the-pulls-request">Set the age of the pulls request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-repo-full-information">Get repo full information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-the-pull-requests-of-the-repo">Get the pull requests of the repo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-pulls-request-by-status-open-or-closed">Get pulls request by status open or closed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#send-email-or-print-on-the-console">Send Email Or Print on the Console</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">github-track</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../examples.html">Examples</a> &raquo;</li>
+      <li>GhTrack Class</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/examples/GhTrack.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ghtrack-class">
+<h1>GhTrack Class<a class="headerlink" href="#ghtrack-class" title="Permalink to this headline"></a></h1>
+<p>This is the main class of the github-track module.</p>
+<section id="configuration-file">
+<h2>Configuration file<a class="headerlink" href="#configuration-file" title="Permalink to this headline"></a></h2>
+<p>You can instantiate the class <em>GhTrack</em> by passing your own configuration file. Otherwise it will load with the default
+configuration file. That default file looks something below.
+In case if you are providing a file, it has to be the absolute path of the file.</p>
+<p><em>auth.twilioapi</em> can be ignored.
+<em>github.token</em> is your development token that you can create through github portal.
+If you are planning to pull <cite>pull requests</cite> more than 60 times. it is recommended to set this value to a valid token.
+An invalid token, will not allow you to query <cite>pull requests</cite> .
+<em>email.to</em> the address email to send the email.
+<em>email.from</em> a valid address email verified by sendGrid in order to be able to send emails.
+<em>email.subject</em> the subject of your email.
+<em>email.sendGridApi</em> Your sendGrid Api key. That is used to authenticate and send email.
+if you provide and invalid <cite>api key</cite> the application will not be able to send any email.
+The <em>repo</em> section is the owner and the name of the repo you want to pull the requests. By default it is “kubernetes/kubernetes”</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">settings</span><span class="p">:</span>
+  <span class="nt">auth</span><span class="p">:</span>
+    <span class="nt">twilioapi</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+  <span class="nt">github</span><span class="p">:</span>
+    <span class="nt">token</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+  <span class="nt">email</span><span class="p">:</span>
+    <span class="nt">to</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">zinalacina@gmail.com</span>
+    <span class="nt">from</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">zlacina@monbili.com</span>
+    <span class="nt">subject</span><span class="p">:</span> <span class="s">&quot;Subject</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">pull</span><span class="nv"> </span><span class="s">request&quot;</span>
+    <span class="nt">sendGridApi</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+  <span class="nt">repo</span><span class="p">:</span>
+    <span class="nt">user</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kubernetes</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">kubernetes</span>
+</pre></div>
+</div>
+</section>
+<section id="setup-the-class-ghtrack">
+<h2>Setup the class GhTrack<a class="headerlink" href="#setup-the-class-ghtrack" title="Permalink to this headline"></a></h2>
+<p>To begin with you need to create an instance of the class GhTrack.
+Like stated above, you can profile a file as configuration values or
+providing the necessary params during the class object creation or
+you can create without any params and keep the default values the application is providing.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">GhTrack</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">GhTrack</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&quot;/absolute/path/to/the/config/file&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">GhTrack</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="s2">&quot;github token&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;email to received email&quot;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;repo owner&quot;</span><span class="p">,</span> <span class="n">repo</span><span class="o">=</span><span class="s2">&quot;public repo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="set-the-age-of-the-pulls-request">
+<h2>Set the age of the pulls request<a class="headerlink" href="#set-the-age-of-the-pulls-request" title="Permalink to this headline"></a></h2>
+<p>By default pulls requests are not older than 7 days.
+.. code-block:: python</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">g</span><span class="o">.</span><span class="n">setAge</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go"># That means the pulls requests will return only today created pulls</span>
+</pre></div>
+</div>
+</section>
+<section id="get-repo-full-information">
+<h2>Get repo full information<a class="headerlink" href="#get-repo-full-information" title="Permalink to this headline"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">repo</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">getRepo</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">repo</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<span class="go">&#39;kubernetes&#39;</span>
+<span class="go">&gt;&gt; repo[&quot;full_name&quot;]</span>
+<span class="go">&#39;kubernetes/kubernetes&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="get-the-pull-requests-of-the-repo">
+<h2>Get the pull requests of the repo<a class="headerlink" href="#get-the-pull-requests-of-the-repo" title="Permalink to this headline"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pulls</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">getPulls</span><span class="p">()</span>
+<span class="go"># if there are pulls the len will return the number of pulls</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">pulls</span><span class="p">)</span>
+<span class="go">30</span>
+</pre></div>
+</div>
+</section>
+<section id="get-pulls-request-by-status-open-or-closed">
+<h2>Get pulls request by status open or closed<a class="headerlink" href="#get-pulls-request-by-status-open-or-closed" title="Permalink to this headline"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pulls</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">getPullsByStatus</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="s2">&quot;open&quot;</span><span class="p">)</span>
+<span class="go"># if there are pulls the len will return the number of pulls</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pulls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;state&quot;</span><span class="p">]</span>
+<span class="go">&#39;open&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="send-email-or-print-on-the-console">
+<h2>Send Email Or Print on the Console<a class="headerlink" href="#send-email-or-print-on-the-console" title="Permalink to this headline"></a></h2>
+<p>Here you can decide to print the html summary of the pulls request or to send to your configurable email.
+If the send grid api key is not set, you will not be able to send emails.
+If the send grid api key is invalid, you will see an exception on the screen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">summary</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">sendEmailOrPrintConsole</span><span class="p">(</span><span class="n">emailNotConsole</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">summary</span>
+<span class="go"># output the html format of the summary.</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../examples.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../reference.html" class="btn btn-neutral float-right" title="Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Lacina ZINA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
