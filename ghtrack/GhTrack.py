@@ -54,7 +54,8 @@ class GhTrack(GhTrackObject):
     """
 
     def getPulls(self):
-        return self.ghRequest.dataRequest(url=f"{self.public_repo}/pulls", old=self.age)
+        pulls = self.ghRequest.dataRequest(url=f"{self.public_repo}/pulls", old=self.age)
+        return list(filter(lambda row: Util.oneWeekOld(row["created_at"], self.age), pulls))
 
     """
     This method retrieves an individual pull request by it number

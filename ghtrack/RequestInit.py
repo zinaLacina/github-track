@@ -37,7 +37,7 @@ class RequestInit:
             parameters = dict()
 
         headers, output = self.__statusCheckedRequest(url, parameters, body)
-        output = [row for row in output if Util.oneWeekOld(row["created_at"], old)]
+        # output = [row for row in output if Util.oneWeekOld(row["created_at"], old)]
         # output = list(filter(lambda row: Util.oneWeekOld(row["created_at"], old), dict(output)))
 
         # page = 2
