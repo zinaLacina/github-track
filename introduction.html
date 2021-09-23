@@ -81,15 +81,45 @@ With it, you can pull any public repositories pull requests from Python scripts.
 <section id="download-and-install">
 <h2>Download and install<a class="headerlink" href="#download-and-install" title="Permalink to this headline"></a></h2>
 <p>First of all make sure you have install python in your machine and the version is higher than <cite>3.6</cite>. If not please process as follow to install it.</p>
-<p><strong>Installation using pip</strong></p>
+<dl class="simple">
+<dt><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>bash</dt><dd><p>brew install <a class="reference external" href="mailto:python&#37;&#52;&#48;3&#46;9">python<span>&#64;</span>3<span>&#46;</span>9</a></p>
+</dd>
+</dl>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a>`
+<strong>Installation using pip</strong></p>
 <p>The easiest way to install is to use  [Python Package Index](<a class="reference external" href="https://pypi.org/project/GhTrack/">https://pypi.org/project/GhTrack/</a>),
 so, a pip install should be enough.</p>
+<dl class="simple">
+<dt><a href="#id7"><span class="problematic" id="id8">``</span></a><a href="#id9"><span class="problematic" id="id10">`</span></a>bash</dt><dd><p>pip3 install GhTrack</p>
+</dd>
+</dl>
+<p><a href="#id11"><span class="problematic" id="id12">``</span></a><a href="#id13"><span class="problematic" id="id14">`</span></a></p>
 <p><strong>Installation by cloning the source code</strong>
 If you have done the installation using pip, you can ignore this part.
 To use it please clone the [github-track](<a class="reference external" href="https://github.com/zinaLacina/github-track">https://github.com/zinaLacina/github-track</a>) repository.</p>
-<p>Once it clone please cd into the directory</p>
+<dl class="simple">
+<dt><a href="#id15"><span class="problematic" id="id16">``</span></a><a href="#id17"><span class="problematic" id="id18">`</span></a>bash</dt><dd><p>git clone <a class="reference external" href="https://github.com/zinaLacina/github-track">https://github.com/zinaLacina/github-track</a></p>
+</dd>
+</dl>
+<p><a href="#id19"><span class="problematic" id="id20">``</span></a>`
+Once it clone please cd into the directory</p>
+<dl class="simple">
+<dt><a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a>bash</dt><dd><p>cd  github-track</p>
+</dd>
+</dl>
+<p><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a></p>
 <p>Once inside the direction check that you have the latest up to date of the setuptools.</p>
-<p>You can now install the <em>module</em></p>
+<dl class="simple">
+<dt><a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a>bash</dt><dd><p>python3 -m pip install –upgrade setuptools</p>
+</dd>
+</dl>
+<p>``
+You can now install the <em>module</em></p>
+<dl class="simple">
+<dt><a href="#id33"><span class="problematic" id="id34">``</span></a><a href="#id35"><span class="problematic" id="id36">`</span></a>bash</dt><dd><p>python3 setup.py install</p>
+</dd>
+</dl>
+<p><a href="#id37"><span class="problematic" id="id38">``</span></a><a href="#id39"><span class="problematic" id="id40">`</span></a></p>
 <p>You are all set for to run the application.</p>
 </section>
 <section id="short-tutorial">
@@ -100,24 +130,8 @@ By default the module has default value in the settings located in the data fold
 The default repo is <code class="docutils literal notranslate"><span class="pre">kubernetes</span></code>.
 So to get the list of the last 7 days pull requests of the <code class="docutils literal notranslate"><span class="pre">kubernetes</span></code> repo.</p>
 <p>Open a terminal, and in the console please type &gt;&gt;``python3``
-After that, import the <code class="docutils literal notranslate"><span class="pre">GhTrack</span></code> module
-.. code-block:: python</p>
-<blockquote>
-<div><p>&gt;&gt; from GhTrack import GhTrack
-# create GhTrack object without any params(first of all the default params)
-&gt;&gt; g = GhTrack()
-#That will print on the console the html of the last 7 days pull requests
-&gt;&gt; g.sendEmailOrPrintConsole(emailNotConsole=False)</p>
-</div></blockquote>
-<p>You can also get the json format of the last 7 days pull requests
-.. code-block:: python</p>
-<blockquote>
-<div><p>&gt;&gt;  from GhTrack import GhTrack
-&gt;&gt; g = GhTrack()
-&gt;&gt; pulls = g.getPulls()
-#json format
-&gt;&gt; pulls</p>
-</div></blockquote>
+After that, import the <code class="docutils literal notranslate"><span class="pre">GhTrack</span></code> module.</p>
+<p>You can also get the json format of the last 7 days pull requests</p>
 <p>Then play with your Github objects:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pull</span> <span class="ow">in</span> <span class="n">pulls</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">pull</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>

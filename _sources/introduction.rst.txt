@@ -10,39 +10,41 @@ Download and install
 
 First of all make sure you have install python in your machine and the version is higher than `3.6`. If not please process as follow to install it.
 
-.. code-block:: python
+```bash
     brew install python@3.9
-
+```
 **Installation using pip**
 
 The easiest way to install is to use  [Python Package Index](https://pypi.org/project/GhTrack/),
 so, a pip install should be enough.
 
-.. code-block:: python
+```bash
     pip3 install GhTrack
-
+```
 
 **Installation by cloning the source code**
 If you have done the installation using pip, you can ignore this part.
 To use it please clone the [github-track](https://github.com/zinaLacina/github-track) repository.
 
-.. code-block:: python
+```bash
     git clone https://github.com/zinaLacina/github-track
-
+```
 Once it clone please cd into the directory
 
-.. code-block:: python
+```bash
     cd  github-track
+```
 
 Once inside the direction check that you have the latest up to date of the setuptools.
 
-.. code-block:: python
+```bash
     python3 -m pip install --upgrade setuptools
-
+``
 You can now install the *module*
 
-.. code-block:: python
+```bash
     python3 setup.py install
+```
 
 You are all set for to run the application.
 
@@ -55,21 +57,24 @@ The default repo is ``kubernetes``.
 So to get the list of the last 7 days pull requests of the ``kubernetes`` repo.
 
 Open a terminal, and in the console please type >>``python3``
-After that, import the ``GhTrack`` module
+After that, import the ``GhTrack`` module.
+
 .. code-block:: python
- >> from GhTrack import GhTrack
- # create GhTrack object without any params(first of all the default params)
- >> g = GhTrack()
- #That will print on the console the html of the last 7 days pull requests
- >> g.sendEmailOrPrintConsole(emailNotConsole=False)
+    from GhTrack import GhTrack
+    # create GhTrack object without any params(first of all the default params)
+    g = GhTrack()
+    #That will print on the console the html of the last 7 days pull requests
+    g.sendEmailOrPrintConsole(emailNotConsole=False)
 
 You can also get the json format of the last 7 days pull requests
+
 .. code-block:: python
-   >>  from GhTrack import GhTrack
-   >> g = GhTrack()
-   >> pulls = g.getPulls()
+   from GhTrack import GhTrack
+   g = GhTrack()
+   pulls = g.getPulls()
    #json format
-   >> pulls
+   pulls
+
 Then play with your Github objects::
 
     for pull in pulls:
