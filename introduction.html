@@ -80,20 +80,28 @@ With it, you can pull any public repositories pull requests from Python scripts.
 <strong>Sending email currently work only with sendGrid</strong></p>
 <section id="download-and-install">
 <h2>Download and install<a class="headerlink" href="#download-and-install" title="Permalink to this headline"></a></h2>
-<p>First of all make sure you have install python in your machine and the version is higher than <code class="docutils literal notranslate"><span class="pre">3.6</span></code>.
-If not please process as follow to install it.
-&gt;&gt;``brew install python&#64;3.9``</p>
-<p>To use it please clone the github repository <a class="reference external" href="https://github.com/zinaLacina/github-track">Github</a>
-Once it clone please cd into the directory
-&gt;&gt; <code class="docutils literal notranslate"><span class="pre">cd</span>&#160; <span class="pre">github-track</span></code>
-Once in the direction check that you have the latest information of the setuptools.
-&gt;&gt; <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">setuptools</span></code>
-And lastly install the github-track module
-&gt;&gt; <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">setup.py</span> <span class="pre">install</span></code>
-And you are all set for to run the application.</p>
-<p>FYI:
-This package will be release in the <a class="reference external" href="https://github.com/zinaLacina/github-track">Python Package Index</a>, so, once done by using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ghtrack</span></code> should
-be enough.</p>
+<p>First of all make sure you have install python in your machine and the version is higher than <cite>3.6</cite>. If not please process as follow to install it.
+.. code-block:: bash
+&gt;&gt; brew install <a class="reference external" href="mailto:python&#37;&#52;&#48;3&#46;9">python<span>&#64;</span>3<span>&#46;</span>9</a></p>
+<p><strong>Installation using pip</strong></p>
+<p>The easiest way to install is to use  [Python Package Index](<a class="reference external" href="https://pypi.org/project/GhTrack/">https://pypi.org/project/GhTrack/</a>),
+so, a pip install should be enough.
+.. code-block:: bash
+&gt;&gt; pip3 install GhTrack</p>
+<p><strong>Installation by cloning the source code</strong>
+If you have done the installation using pip, you can ignore this part.
+To use it please clone the [github-track](<a class="reference external" href="https://github.com/zinaLacina/github-track">https://github.com/zinaLacina/github-track</a>) repository.
+.. code-block:: bash
+&gt;&gt; git clone <a class="reference external" href="https://github.com/zinaLacina/github-track">https://github.com/zinaLacina/github-track</a></p>
+<p>Once it clone please cd into the directory
+.. code-block:: bash
+&gt;&gt; cd  github-track</p>
+<p>Once inside the direction check that you have the latest up to date of the setuptools.
+.. code-block:: bash</p>
+<blockquote>
+<div><p>python3 -m pip install –upgrade setuptools</p>
+<p>And lastly install the <em>module</em></p>
+</div></blockquote>
 </section>
 <section id="short-tutorial">
 <h2>Short tutorial<a class="headerlink" href="#short-tutorial" title="Permalink to this headline"></a></h2>
