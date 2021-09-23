@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="GhTrack",
-    version="1.0.1",
+    version="1.1.1",
     # py_modules=["GhTrack"],
     description="An Python module api app",
     long_description=long_description,

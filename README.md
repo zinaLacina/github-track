@@ -12,7 +12,16 @@ First of all make sure you have install python in your machine and the version i
 ```bash 
 brew install python@3.9
 ```
+**Installation using pip**
 
+The easiest way to install is to use  [Python Package Index](https://pypi.org/project/GhTrack/),
+so, a pip install should be enough.
+```bash
+pip3 install GhTrack
+```
+
+**Installation by cloning the source code**
+If you have done the installation using pip, you can ignore this part.
 To use it please clone the [github-track](https://github.com/zinaLacina/github-track) repository.
 ```bash
 git clone https://github.com/zinaLacina/github-track
@@ -31,9 +40,6 @@ Once inside the direction check that you have the latest up to date of the setup
  ``` 
  And you are all set for to run the application.
 
-FYI: This package will be published in the [Python Package Index](https://github.com/zinaLacina/github-track), so, a pip install
-should be enough.
-
 Short tutorial
 --------------
 
@@ -45,7 +51,7 @@ Open a terminal, and in the console please type.
 ``` 
 After that, import the `GhTrack` module 
 ```bash
->> from GhTrack import GhTrack
+>> from ghtrack.GhTrack import GhTrack
 # create GhTrack object without any params(first of all the default params)
 >> g = GhTrack() 
 #Print on the console the html of the last 7 days pull requests 
@@ -54,7 +60,7 @@ After that, import the `GhTrack` module
 
 You can also get the json format of the last 7 days pull requests 
 ```bash
->> from GhTrack import GhTrack 
+>> from ghtrack.GhTrack import GhTrack 
 >> g = GhTrack() 
 >> pulls = g.getPulls()
 #Print the json format 

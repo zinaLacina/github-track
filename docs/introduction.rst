@@ -7,24 +7,38 @@ With it, you can pull any public repositories pull requests from Python scripts.
 
 Download and install
 --------------------
-First of all make sure you have install python in your machine and the version is higher than ``3.6``.
-If not please process as follow to install it.
->>``brew install python@3.9``
 
-To use it please clone the github repository `Github
-<https://github.com/zinaLacina/github-track>`__
+First of all make sure you have install python in your machine and the version is higher than `3.6`. If not please process as follow to install it.
+.. code-block:: bash
+>> brew install python@3.9
+
+**Installation using pip**
+
+The easiest way to install is to use  [Python Package Index](https://pypi.org/project/GhTrack/),
+so, a pip install should be enough.
+.. code-block:: bash
+>> pip3 install GhTrack
+
+
+**Installation by cloning the source code**
+If you have done the installation using pip, you can ignore this part.
+To use it please clone the [github-track](https://github.com/zinaLacina/github-track) repository.
+.. code-block:: bash
+>> git clone https://github.com/zinaLacina/github-track
+
 Once it clone please cd into the directory
->> ``cd  github-track``
-Once in the direction check that you have the latest information of the setuptools.
->> ``python3 -m pip install --upgrade setuptools``
-And lastly install the github-track module
->> ``python3 setup.py install``
-And you are all set for to run the application.
+.. code-block:: bash
+>> cd  github-track
 
-FYI:
-This package will be release in the `Python Package Index
-<https://github.com/zinaLacina/github-track>`__, so, once done by using ``pip install ghtrack`` should
-be enough.
+Once inside the direction check that you have the latest up to date of the setuptools.
+.. code-block:: bash
+ python3 -m pip install --upgrade setuptools
+
+ And lastly install the *module*
+.. code-block:: bash
+ python3 setup.py install
+
+ And you are all set for to run the application.
 
 Short tutorial
 ---------------------
