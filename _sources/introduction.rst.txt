@@ -9,36 +9,38 @@ Download and install
 --------------------
 
 First of all make sure you have install python in your machine and the version is higher than `3.6`. If not please process as follow to install it.
-.. code-block:: bash
+
+.. code-block:: python
 >> brew install python@3.9
 
 **Installation using pip**
 
 The easiest way to install is to use  [Python Package Index](https://pypi.org/project/GhTrack/),
 so, a pip install should be enough.
-.. code-block:: bash
+.. code-block:: python
 >> pip3 install GhTrack
 
 
 **Installation by cloning the source code**
 If you have done the installation using pip, you can ignore this part.
 To use it please clone the [github-track](https://github.com/zinaLacina/github-track) repository.
-.. code-block:: bash
+
+.. code-block:: python
 >> git clone https://github.com/zinaLacina/github-track
 
 Once it clone please cd into the directory
-.. code-block:: bash
+.. code-block:: python
 >> cd  github-track
 
 Once inside the direction check that you have the latest up to date of the setuptools.
-.. code-block:: bash
+.. code-block:: python
  python3 -m pip install --upgrade setuptools
 
- And lastly install the *module*
-.. code-block:: bash
+You can now install the *module*
+.. code-block:: python
  python3 setup.py install
 
- And you are all set for to run the application.
+You are all set for to run the application.
 
 Short tutorial
 ---------------------
